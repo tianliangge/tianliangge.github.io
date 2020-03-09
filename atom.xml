@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>天亮哥</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://tianliangge.github.io/"/>
+  <updated>2020-03-09T09:29:08.594Z</updated>
+  <id>https://tianliangge.github.io/</id>
+  
+  <author>
+    <name>天亮哥</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>项目管理基本流程</title>
+    <link href="https://tianliangge.github.io/2020/03/08/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B/"/>
+    <id>https://tianliangge.github.io/2020/03/08/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B/</id>
+    <published>2020-03-07T16:06:33.000Z</published>
+    <updated>2020-03-09T09:29:08.594Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="流程规范"><a href="#流程规范" class="headerlink" title="流程规范"></a>流程规范</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol><li><strong>需求整理：</strong>和业务、开发 深入 沟通之后做产品设计，以产品原型、产品文档方式整理出详细产品方案</li><li><strong>需求评审：</strong>产品文档、产品原型完善之后邀请设计师、测试、开发（如有必要建议加上业务方）参加需求评审会；<strong>会议开始前要求所有参会人员已经认真地看过产品经理提供的产品原型、产品文档</strong>；在该会议上所有参会人员对产品细节提出疑问，力求所有人对所有细节都有清晰明确和一致的理解，如果有异议，讨论之后由产品/业务方修改需求后重复该环节。会议最终结果要求所有人对产品需求描述（原型、文档）清晰明确无异议。</li><li><strong>准备阶段：</strong>需求评审会之后各岗位并行启动，测试开始写测试用例，设计师设计初稿，接口设计接口方案，开发设计开发方案</li><li><strong>测试用例评审：</strong>所有人参与测试用例评审，通过对测试用例的评审加深对需求的逻辑细节理解，进一步完善开发方案和接口方案、产品和设计师一起完善交互设计</li><li><strong>设计方案评审：</strong>评审设计方案，对于开发来说主要是避免出现某些特殊情况下的设计方案缺失，例如横向/纵向元素较多时在小屏幕下的设计是否缺失，元素内容弹性较大时（文本长度）不同内容的设计方案是否合理完善，动态表现是否合理等</li><li><strong>接口方案评审：</strong>开发和测试、产品（可无）评审接口方案，最后以文档形式交付</li><li><strong>开发方案评审：</strong>产品、测试一起评审开发方案，避免开发方案设计缺陷、前后端对相同业务理解不一致</li><li><strong>开发阶段：</strong>开发开始严格按照开发方案分模块进行迭代开发，测试开始按照测试用例和接口文档编写接口测试代码、测试脚本</li><li><strong>测试阶段：</strong>开发分模块提交给测试进行测试，开发配合测试Debug</li><li><strong>上线：</strong>所有模块测试完毕，gitlab 上打 tag，打出各渠道包，提交上线</li><li><strong>需求更改：</strong>开发、测试过程中若有需求更改（包括但不限于产品逻辑、文案描述、UI 设计），<strong>重复执行以上步骤。严禁直接找开发私下调整，务必保证所有改动都会通知到所有人</strong>。<strong><em>注：不需要步骤的可以跳过</em></strong>，例如 UI 改动，不需要“接口方案评审”，接口改动不需要“设计方案评审”。</li></ol><h2 id="各环节及岗位交付要求"><a href="#各环节及岗位交付要求" class="headerlink" title="各环节及岗位交付要求"></a>各环节及岗位交付要求</h2><ol><li><strong>产品交付要求：</strong><ol><li>文档完整、无歧义、简洁、通俗易懂，产品原型请保证“基本交互”，最好是高保真；</li><li>若有判断逻辑的，请在产品原型上注明某项操作导致的后续流程所需要执行的判断逻辑。</li></ol></li><li><strong>接口交付要求：</strong><ol><li>以接口文档形式交付（推荐代码生成）</li><li>注明都有哪些接口；</li><li>注明每个接口的业务说明；</li><li>注明每个接口的数据结构；</li><li>注明每个接口的各字段是否可以为空；</li><li>各接口中相同含义的字段名称和数据类型要保持相同；</li><li>如果存在枚举字段，需要详细给出各状态的枚举值以及对应的说明；</li><li>接口请求头、请求格式的详细规定；</li><li>接口非正常响应状态的详细规定；</li><li>接口评审完成后要尽快先给出“假数据接口”；</li></ol></li><li><strong>UI 交付要求：</strong><ol><li>文件夹路径按照产品原型逻辑组织，每个对应模块的文件夹下应包含所有页面对应的标注图，不应将类似标注图放到其他文件夹下</li><li>提供全局适用的设计规范定义，以及适用说明：包括但不限于全局用到的颜色，字体大小，按钮在各种状态下的背景色、前景色、宽高，文本间行间距，文内折行时的行间距，分割线颜色，内边距等等</li><li>需要提供不同尺寸的屏幕下设计差异性，例如横向/纵向元素较多的情况下，需要提供小尺寸屏幕的设计标注图；横向/纵向元素较少时，需要提供大尺寸屏幕的设计标注图；若元素内容多少弹性较大时，请提供不同情况下（内容较多和内容较少）时的设计标注图</li><li>切图要压缩</li></ol></li><li><strong>测试方案交付要求：</strong><ol><li>完善的测试用例文档</li><li>接口测试方案（最好有测试脚本能够批量测试所有接口）</li><li>上线必备流程/条件</li></ol></li><li><strong>开发方案交付要求：</strong><ol><li>技术选型调研结论报告（优劣比较、踩坑方案）</li><li>复杂的业务流程要给出流程图、时序图（图可以很简单，但是要能精准地诠释方案）</li><li>复杂需求更改及代码重构要有架构设计方案，需要经过内部评审</li></ol></li><li><strong>开发阶段执行要求：</strong><ol><li>严格按照<strong>4个参考（开发方案、需求文档、产品原型、设计图）</strong>开发/Debug，代码提交前务必执行单元测试</li><li>若开发过程中发现设计标注或产品需求描述不够清晰、逻辑错误等问题，<strong>需邮件知会项目组内所有人，重复执行流程步骤解决问题</strong>。严谨私下沟通私自解决，防止其他人不知情导致工作出错</li><li>开发过程中若需要修订技术方案，需要开会讨论，知会相关同事</li></ol></li></ol><div id="gitalk-container"></div><p><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"></p><script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script><script type="text/javascript">   var gitalk = new Gitalk({   clientID: '029cdd64158fabbd2fa7',   clientSecret: '674b28b52b10bd076788c5ce0530c8b29b126b4f',   repo: 'tianliangge.github.io',   owner: 'tianliangge',   admin: ['tianliangge'],   id: 'tianliangge-gittalk',      // Ensure uniqueness and length less than 50   distractionFreeMode: false  // Facebook-like distraction free mode   })   gitalk.render('gitalk-container');</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://tianliangge.github.io/2018/12/08/hello-world/"/>
+    <id>https://tianliangge.github.io/2018/12/08/hello-world/</id>
+    <published>2018-12-08T08:40:40.921Z</published>
+    <updated>2018-12-08T08:40:40.921Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">bash</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
